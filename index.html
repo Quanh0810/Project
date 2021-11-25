@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm 4: Website Bán Hàng</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar--list">
+                        <a href="./intro.html" class="header__navbar--item" target="#(_blank)">Project của Nhóm 4 - Tâm Tùng Anh Dũng </a>
+                        <!-- <li class="header__navbar--item">Project của Nhóm 4 - Tâm Tùng Anh Dũng</li> -->
+                    </ul>
+    
+                    <ul class="header__navbar--list">
+                        <li class="header__navbar--item">
+                            <a href="#" class="header__navbar--url header__navbar--bold" id="registerBtn">Đăng Ký</a>
+                        </li>
+                        <li class="header__navbar--item">
+                            <a href="#" class="header__navbar--url header__navbar--bold" id="loginBtn">Đăng Nhập</a>
+                        </li>
+                    </ul>
+        
+                </nav>
+
+                <div class="header-search">
+                    
+                    <div class="header__logo">
+                        <a href="index.html"><img class="header__logo--img" src="./img/logo.png" alt="Logo Nhóm 4"></a>
+                    </div>
+
+                    <div class="header__search">
+                        <input id="textProduct" class="header__search--input" placeholder="Tìm kiếm điện thoại yêu thích...">
+                        <button id="search" class="header__search--btn">
+                            <i class="header__search--icon ti-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header__cart">
+                        <i class="header__cart--icon ti-shopping-cart-full"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column--2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading--icon ti-menu"></i>
+                                Thương Hiệu
+                            </h3>
+            
+                            <ul id="category-list">
+                                <!-- main.js 20947 xử lý danh mục -->
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="grid__column--10">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="footer">
+    </div> -->
+    <footer class="footer-distributed mt-5" id="footer">
+
+        <div class="footer-left">
+
+            <img src="./img/logo.png" width = 200px>
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+
+                <a href="#">Blog</a>
+
+                <a href="#">Pricing</a>
+
+                <a href="#">About</a>
+
+
+
+                <a href="#">Contact</a>
+            </p>
+
+
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa ti-location-pin"></i>
+                <p><span>41 Pho Vong</span>Ha Noi, Viet Nam</p>
+            </div>
+
+            <div>
+                <i class="fa ti-mobile"></i>
+                <p>0965934757</p>
+            </div>
+
+            <div>
+                <i class="fa ti-email"></i>
+                <p><a href="ttad@gmail.com">ttad@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>CHÍNH SÁCH</span>
+                Chính sách mua hàng từ xa <br>
+                Chính sách đặt cọc sản phẩm <br>
+                Chính sách giao nhận - đổi trả <br>
+                Chính sách bảo hành <br>
+                Chính sách bảo mật thông tin <br>
+                Thỏa thuận sử dụng và giao dịch <br>
+                Thanh toán trực tuyến <br>
+                Thanh toán khi nhận hàng (COD)
+            </p>
+
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fab ti-facebook"></i></a>
+                <a href="#"><i class="fab ti-instagram"></i></a>
+                <a href="#"><i class="fab ti-github"></i></a>
+            </div>
+
+
+
+        </div>
+
+    </footer>
+
+    <div class="modal" id="formModal">
+        <div class="modal__overlay"></div>
+
+    <div class="modal__main">
+        
+        <!-- Form Đăng ký -->
+        <div class="body-form" id="register">
+            <div class="body-form__header">
+                <h3 class="body-form__heading" id="sign_up_btn">Đăng ký</h3>
+                <span class="body-form__switch--btn" id="sign_in_btn">Đăng nhập</span>
+            </div>
+
+            <div class="body-form__form">
+                <div class="body-form_group">
+                    <input id="sign_up_name_input" type="text" class="body-form__input" placeholder="Nhập username">
+                </div>
+                <div class="body-form_group">
+                    <input id="sign_up_password_input" type="password" class="body-form__input" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="body-form_group">
+                    <input id="repeat_password_input" type="password" class="body-form__input" placeholder="Nhập lại mật khẩu">
+                </div>
+            </div>
+
+            <div class="body-form__control">
+                <button class="btn btn--back" id="backHome1">QUAY LẠI</button>
+                <button class="btn btn--primary" id="dangKy">ĐĂNG KÝ</button>
+            </div>
+        </div>
+
+        <!-- Form Đăng nhập -->
+        <div class="body-form" id="login">
+            <div class="body-form__header">
+                <h3 class="body-form__heading">Đăng nhập</h3>
+                <span class="body-form__switch--btn">Đăng ký</span>
+
+            </div>
+
+            <div class="body-form__form">
+                <div class="body-form_group">
+                    <input id="login_user_input" type="text" class="body-form__input" placeholder="Nhập username">
+                </div>
+                <div class="body-form_group">
+                    <input id="login_pass_input" type="password" class="body-form__input" placeholder="Nhập mật khẩu">
+                </div>
+            </div>
+
+            <div class="body-form__control">
+                <button class="btn btn--back" id="backHome2">QUAY LẠI</button>
+                <button class="btn btn--primary" id="dangNhap">ĐĂNG NHẬP</button>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Trang Admin -->
+    <div id="admin">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="Brand" >
+                            <label>Thương hiệu</label>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="selectBrand">
+                                    <option value="0">Select Brand:</option>
+                                    </select>
+                                </div>
+                            <input type="text" id="brand">
+                        </div>
+                        <div>
+                            <label>Tên Sản phẩm</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div>
+                            <label>Giá gốc</label>
+                            <input type="text" name="origin" id="origin">
+                        </div>
+                        <label>Giá Khuyến mãi</label>
+                        <input type="text" name="price" id="price">
+                        <div>
+                            <label>Hình ảnh</label>
+                            <input type="text" name="picture" id="picture">
+                        </div>
+                        <div class="form-action-buttons">
+                            <Button onclick="add()">Submit</Button>
+                        </div>
+                    </td>
+                    
+                    <table id="bang">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Origin</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

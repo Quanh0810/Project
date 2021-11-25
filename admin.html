@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+
+    <style>
+        body>table {
+            width: 80%;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table.list {
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even),
+        table.list thead>tr {
+            background-color: #dddddd;
+        }
+
+        input[type=text],
+        input[type=number] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            background-color: #ddd;
+            color: #000;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form div.form-action-buttons {
+            text-align: right;
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #0000ee;
+            margin-right: 4px;
+        }
+
+        label.validation-error {
+            color: red;
+            margin-left: 5px;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div id="ID" >
+                        <label>Id</label>
+                        <input type="number" id="id">
+                    </div>
+                    <div>
+                        <label> Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label>Origin</label>
+                        <input type="text" name="origin" id="origin">
+                    </div>
+                    <label>Price</label>
+                    <input type="text" name="price" id="price">
+                    <div class="form-action-buttons">
+                        <Button onclick="add()">Submit</Button>
+                    </div>
+                </td>
+                
+                <table id="bang">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Origin</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>   
+                    
+                    
+    <script>
+        var data = [
+       
+        ];
+
+        
+
+        function add() {
+        
+
+
+            var xid = document.getElementById('id').value;
+            var xname = document.getElementById('name').value;
+            var xorigin = document.getElementById('origin').value
+            var xprice = document.getElementById('price').value
+
+
+            item = {
+                id: xid,
+                name: xname,
+               origin: xorigin,
+               price: xprice,
+            }
+
+
+          
+
+
+            let index = data.findIndex((c) => c.id === xid)
+            console.log(index)
+
+            if (index >= 0) {
+                data.splice(index, 1, item)
+            }
+            else {
+                data.push(item);
+            }
+            clear()
+            show();
+
+        }
+
+
+
+
+        function clear() {
+            document.getElementById('id').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('origin').value = '';
+            document.getElementById('price').value = '';
+        }
+
+        function show() {
+            var table = `<tr>
+                             <th>Id</th>
+                            <th>Name</th>
+                            <th>Origin</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>`
+
+            for (let i = 0; i < data.length; i++) {
+                table += `<tr>
+                             <td>${data[i].id}</td>
+                            <td>${data[i].name}</td>
+                            <td>${data[i].origin}</td>
+                            <td>${data[i].price}</td>
+                            <th>
+                                <button onclick="Delete(${data[i].id})">Delete</button>
+                                <button onclick="Edit(${data[i].id})">Edit</button>
+                                </th>
+                        </tr>`
+            }
+            document.getElementById("bang").innerHTML = table
+        }
+
+        function Delete(id) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].id == id) {
+                    data.splice(i, 1)
+                    show();
+                }
+            }
+        }
+        function Edit(id) {
+            document.getElementById("ID");
+            for (let i = 0; i <= data.length; i++) {
+                if (data[i].id == id) {
+                    document.getElementById('id').value = data[i].id;
+                    document.getElementById('name').value = data[i].name;
+                    document.getElementById('origin').value = data[i].origin;
+                    document.getElementById('price').value = data[i].price;
+                }
+
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

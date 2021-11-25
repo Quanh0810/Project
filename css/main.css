@@ -1,0 +1,348 @@
+.header {
+    height: var(--header-height--);
+    background-color: var(--main-color);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+}
+
+.header__navbar--list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 8px 0 0 0;
+}
+
+.header__navbar--item {
+    margin: 0px 18px;
+    
+}
+
+.header__navbar--item,
+.header__navbar--url {
+    display: inline-block;
+    font-size: 15px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar--item:hover,
+.header__navbar--url:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.header__navbar--bold {
+    font-weight: 500;
+}
+
+/* Phần Search */
+.header-search {
+    height: var(--header-search-height);
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.header__logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+
+.header__logo--img {
+    width: 60px;
+    color: white;
+}
+
+.header__search {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    display: flex;
+}
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__cart--icon {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+.header__search--input {
+    width: 96%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+.header__search--btn {
+    background-color: var(--main-color);
+    border: none;
+    width: 8%;
+    height: 36px;
+    margin-top: 2px;
+    margin-right: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header__search--icon {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--white-color);
+    /* position: relative; */
+    /* margin-right: 5px; */
+}
+
+/* Main container */
+.main__container {
+    background-color: #f5f5f5;
+}
+
+.category {
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.category__heading {
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 16px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.category__heading--icon {
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+#category-list {
+    padding-left: 20px;
+    list-style: none;
+    
+
+    
+}
+#category-item a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-family: Sans-serif !important;
+    color: #343a40;
+    font-weight: 550;
+
+    
+    
+}
+
+#category-item__link {
+    text-decoration:overline;
+    padding: 8px 15px;
+    display: block;
+    
+}
+
+#category-item__link:hover {
+    color: var(--text-color);
+}
+
+/* Bộ lọc */
+
+
+/* Sản phẩm .*/
+
+.product {
+    margin-bottom: 50px;
+}
+
+.product__item {
+    display: inline-block;
+    /* margin-top: 10px; */
+    text-decoration: none;
+    background-color: var(--white-color);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 1s;
+    will-change: transform;
+    cursor: pointer;
+    
+}
+
+/* .product__item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+} */
+
+.product__item--img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--white-color);
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+   width: auto;
+   height: auto;
+   background-color: #fcf8f8;
+   border-radius: 10px;
+   
+
+}
+
+
+.product__item--img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+}
+
+.product__item--name {
+    color: #444444;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16px;
+    height: 34px;
+    margin: 19px 0 8px;
+    padding: 0 10px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.product__item--price {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product__item--priceOld {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: line-through;
+    justify-items: baseline;
+}
+
+.product__item--priceNew {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--main-color);
+    /* margin-left: 10px; */
+    margin-right: 10px;
+    margin-left: 7px;
+}
+
+.product__item--action {
+    display: flex;
+    margin: 10px 10px 0;
+    justify-content: space-between;
+}
+
+.product__item--like {
+    font-size: 14px;
+}
+
+.product__item--like:active {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.product__item--brand {
+    margin-bottom: 10px;
+    font-family: Sans-serif !important;
+    color: #444444;
+    text-transform: capitalize;
+}
+    
+    
+    
+
+
+
+/* ĐĂNG KÝ ĐĂNG NHẬP */
+
+.body-form {
+    /* padding: 14px 34px;
+    width: 500px;
+    height: 360px;
+    margin-left:  ; */
+    background-color: rgb(242, 244, 250);
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 32px 42px;
+    box-sizing: border-box;
+}
+
+.body-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body-form__heading {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.body-form__switch--btn {
+    color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.body-form__form {
+    /* margin-top: 14px; */
+}
+
+.body-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 14px;
+    padding: 0 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    outline: none;
+}
+
+.body-form__input:focus {
+    border-color: var(--main-color);
+}
+
+.body-form__control {
+    margin-top: 60px;
+    display: flex;
+    justify-content: right;
+}
+
+.btn--back {
+    margin-right: 10px;
+}
+.btn--back:hover{
+    background-color: rgb(62, 107, 165);
+    transform: scale(1.05);
+}
+.btn--primary:hover{
+    background-color: rgb(62, 107, 165);
+    transform: scale(1.05);
+}
+
